@@ -16,7 +16,7 @@ jobs:
           cd venv
           . ./bin/activate
           pip install --upgrade setuptools wheel
-          pip install -r requirements.txt
+          pip install -r ../requirements.txt
       - name: Initialization
         run: |
           git status
