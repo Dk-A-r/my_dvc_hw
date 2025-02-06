@@ -1,0 +1,11 @@
+stages:
+  featurization:
+    cmd: python3 code/featurization.py
+    deps:
+    - code/featurization.py
+    - data/test_data.csv
+    - data/train_data.csv
+    outs:
+    - data/norm_params.json
+    - data/processed_test_data.npy
+    - data/processed_train_data.npy

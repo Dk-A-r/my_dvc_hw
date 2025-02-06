@@ -1,0 +1,36 @@
+schema: '2.0'
+stages:
+  featurization:
+    cmd: python3 code/featurization.py
+    deps:
+    - path: code/featurization.py
+      hash: md5
+      md5: e50f7b1d231cb9961f8ff382750c660f
+      size: 1545
+      isexec: true
+    - path: data/test_data.csv
+      hash: md5
+      md5: c807df8d6d804ab2647fc15c3d40f543
+      size: 18289443
+      isexec: true
+    - path: data/train_data.csv
+      hash: md5
+      md5: 5b49cf1b57fb9d6102b559d59d99df7c
+      size: 109575994
+      isexec: true
+    outs:
+    - path: data/norm_params.json
+      hash: md5
+      md5: e46984ac8b7097bfddfe5d9210f78ca4
+      size: 54
+      isexec: true
+    - path: data/processed_test_data.npy
+      hash: md5
+      md5: a5257a91e73920bdd4cafd0f88105b74
+      size: 62800128
+      isexec: true
+    - path: data/processed_train_data.npy
+      hash: md5
+      md5: 9ee0468925c998fda26d197a14d1caec
+      size: 376800128
+      isexec: true
