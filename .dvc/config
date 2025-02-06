@@ -1,0 +1,6 @@
+['remote "origin"']
+    url = s3://dvc
+    endpointurl = https://dagshub.com/dkarpov.legal/dagshub_mnist.s3
+['remote "yandexs3"']
+    url = s3://mynewbucket
+    endpointurl = https://storage.yandexcloud.net
