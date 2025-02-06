@@ -16,5 +16,5 @@ jobs:
           pip install -r requirements.txt
       - name: Initialization
         run: |
-          git init
-          dvc init
+          git status
+          dvc status
