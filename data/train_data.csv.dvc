@@ -1,0 +1,13 @@
+md5: 704dab452f459d0dac85afefba0687bb
+frozen: true
+deps:
+- checksum: '12621033478968126288443185544916982162'
+  size: 109575994
+  hash: md5
+  path: https://pjreddie.com/media/files/mnist_train.csv
+outs:
+- md5: 5b49cf1b57fb9d6102b559d59d99df7c
+  size: 109575994
+  isexec: true
+  hash: md5
+  path: train_data.csv
