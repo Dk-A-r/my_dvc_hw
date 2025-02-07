@@ -19,6 +19,8 @@ jobs:
           pip install -r ../requirements.txt
       - name: Initialization
         run: |
+          which dvc || echo "DVC not found in PATH"
+          python -m site
           cd venv
           pwd
           git init
