@@ -39,6 +39,7 @@ jobs:
           dvc remote modify origin --local secret_access_key {{secrets.DAGSHUB_SECRET_ACCESS_KEY}}
           dvc remote modify yandexs3 --local access_key_id {{secrets.YANDEX_ACCESS_KEY_ID}}
           dvc remote modify yandexs3 --local secret_access_key {{secrets.YANDEX_SECRET_ACCESS_KEY}}
+          dvc remote modify yandexs3 region ru-central1
           dvc remote list
           dvc pull -r yandexs3
 
