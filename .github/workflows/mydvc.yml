@@ -25,4 +25,4 @@ jobs:
           #python -m site
           #pwd
           git init
-          dvc init
+          dvc init -f
