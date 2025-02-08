@@ -39,7 +39,7 @@ jobs:
           aws configure set aws_secret_access_key {{secrets.YANDEX_SECRET_ACCESS_KEY}}
           aws configure set region ru-central1
           aws configure set endpoint-url https://storage.yandexcloud.net
-          aws s3 mb s3://mynewbucket --region ru-central1 --endpoint-url https://storage.yandexcloud.net
+          aws s3 mb s3://mynewbucket --debug --region ru-central1 --endpoint-url https://storage.yandexcloud.net
           aws s3 ls s3://mynewbucket
           dvc remote add yandexs3 s3://mynewbucket
           dvc remote modify yandexs3 endpointurl https://storage.yandexcloud.net
