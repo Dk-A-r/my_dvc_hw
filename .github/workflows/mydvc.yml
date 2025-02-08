@@ -17,9 +17,13 @@ jobs:
           #. ./bin/activate
           pip install --upgrade setuptools wheel
           pip install -r requirements.txt
+          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+          unzip awscliv2.zip
+          sudo ./aws/install
           pip uninstall -y boto3
           pip install boto3==1.35.*
           pip list | grep boto3
+          aws --version
       - name: Initialization
         run: |
           #cd venv
