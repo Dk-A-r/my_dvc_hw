@@ -40,17 +40,17 @@ jobs:
           export AWS_DEFAULT_REGION="ru-central1"
       - name: DVC remote configuration
         run: |
-          aws configure set aws_access_key_id {{secrets.YANDEX_ACCESS_KEY_ID}}
-          aws configure set aws_secret_access_key {{secrets.YANDEX_SECRET_ACCESS_KEY}}
-          aws configure set region ru-central1
-          aws configure set endpoint_url https://storage.yandexcloud.net
-          aws s3 mb s3://mynewbucket --debug --region ru-central1 --endpoint-url https://storage.yandexcloud.net
-          aws s3 ls s3://mynewbucket
+          #aws configure set aws_access_key_id {{secrets.YANDEX_ACCESS_KEY_ID}}
+          #aws configure set aws_secret_access_key {{secrets.YANDEX_SECRET_ACCESS_KEY}}
+          #aws configure set region ru-central1
+          #aws configure set endpoint_url https://storage.yandexcloud.net
+          #aws s3 mb s3://mynewbucket --debug --region ru-central1 --endpoint-url https://storage.yandexcloud.net
+          #aws s3 ls s3://mynewbucket
           dvc remote add yandexs3 s3://mynewbucket
           dvc remote modify yandexs3 endpointurl https://storage.yandexcloud.net
-          dvc remote modify yandexs3 --local access_key_id {{secrets.YANDEX_ACCESS_KEY_ID}}
-          dvc remote modify yandexs3 --local secret_access_key {{secrets.YANDEX_SECRET_ACCESS_KEY}}
-          dvc remote modify yandexs3 region ru-central1
+          #dvc remote modify yandexs3 --local access_key_id {{secrets.YANDEX_ACCESS_KEY_ID}}
+          #dvc remote modify yandexs3 --local secret_access_key {{secrets.YANDEX_SECRET_ACCESS_KEY}}
+          #dvc remote modify yandexs3 region ru-central1
           dvc remote list
           dvc pull -v -r yandexs3
 
